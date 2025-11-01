@@ -1,0 +1,31 @@
+//202510125208
+//1287560134@qq.com
+//周钰芹
+#include <stdio.h>
+int main(){
+    int i,n ;
+
+    int is_prime = 1; 
+    scanf("%d", &n);
+    if (n<=0||n>=50){
+        printf("输入不符合要求，请重新输入小于50的整数");
+    }
+    if (n==1){
+        is_prime=0;
+    }else {
+        i=2;
+        while(i<n){
+            if (n%i==0){
+         is_prime=0;
+         break;
+            }
+            i++;
+        }
+    }
+    if (is_prime){
+        printf("密码安全，设置成功");
+    }else{
+        printf("密码不安全，重新设置");
+    }
+    return 0;
+}
